@@ -5,7 +5,7 @@ namespace GenericCollectionTutorial {
     class Program {
         static void Main(string[] args) {
             // create list for weather class 
-            var WxHistory = new List<Weather>(3);
+            /*var WxHistory = new List<Weather>(3);
             var DtThr = new Weather {
                 Today = new DateTime(2021, 2, 18),
                 Temperature = 19,
@@ -32,44 +32,57 @@ namespace GenericCollectionTutorial {
                     $" Percipitation was {day.Percipitation} inches" +
                     $" Temperature was {day.Temperature} degrees";
                     Console.WriteLine(msg);
+            */
+
+            // create generic friends collection class exercise Monday 2/22
+
+            var friends = new List<Friend>();
+
+            var Jess = new Friend {Name = "Jess", Email = "mynameisJess@yahoo.com", BFF = true };
+            friends.Add(Jess);
+
+            var Patty = new Friend {Name = "Patty", Email = "Patty@yahoo.com", BFF = true };
+            friends.Add(Patty);
+
+
+            foreach (var friend in friends) {
+                Console.WriteLine($"{friend.Name}");
+
+
             }
-            
-           
-
-
 
 
             // created generic list
-            var ints = new List<int>();
+           // var ints = new List<int>();
             // creating another list (strings)
-            var strs = new List<string> {
-            "orange", "blue", "gray", "red", "black", "green"
-            }; 
+           // var strs = new List<string> {
+            //"orange", "blue", "gray", "red", "black", "green"
+            //}; 
             //Print favorite color list
-            Console.WriteLine($"Favorite color count is {strs.Count}");
+            //Console.WriteLine($"Favorite color count is {strs.Count}");
             //Sort Colors
-            strs.Sort();
+           // strs.Sort();
             //for each statement on sorts
-            foreach (var color in strs) {
+            //foreach (var color in strs) {
                 //print sorted list
-            Console.WriteLine($"Color is {color}");
+           // Console.WriteLine($"Color is {color}");
             }
 
             //initial add to our collection
 
-            ints.Add(7);
-            ints.Add(10);
-            ints.Add(3);
-            ints.Add(6);
-            ints.Add(96);
-            ints.Add(22);
+            //ints.Add(7);
+            //ints.Add(10);
+            //ints.Add(3);
+            //ints.Add(6);
+            //ints.Add(96);
+            //ints.Add(22);
             // used for each statement 
-            foreach (var i in ints) {
+            //foreach (var i in ints) {
               //print statement for favorite numbers
-                Console.WriteLine($"Favorite number {i}");
-            }
+            //    Console.WriteLine($"Favorite number {i}");
+            //}
 
 
-        }
+        
     }
 }
